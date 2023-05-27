@@ -131,7 +131,7 @@ source_files = glob.glob('**/*.js')
 docs = Docs()
 for f in source_files:
     # this assumes the file names are unique in code
-    docs.add(f, citation='File ' + os.path.name(f), key=os.path.name(f))
+    docs.add(f, citation='File ' + os.path.basename(f), key=os.path.basename(f))
 answer = docs.query("Where is the search bar in the header defined?")
 print(answer)
 ```
